@@ -1,0 +1,184 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+p {
+  text-align: justify;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  line-height: 1.6;
+  background-color: var(--cor-fundo);
+  color: #1b1b1b;
+}
+
+/* Paleta quilombola */
+:root {
+  --cor-preta: #000000;
+  --cor-vermelha: #c1272d;
+  --cor-dourada: #f4b400;
+  --cor-verde: #007a3d;
+  --cor-fundo: #fff9f2;
+}
+
+/* Cabeçalho */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+  background: linear-gradient(90deg,
+    var(--cor-preta),
+    var(--cor-vermelha),
+    var(--cor-dourada),
+    var(--cor-verde)
+  );
+  color: white;
+  text-align: center;
+  padding: 1.5rem 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+header h1 {
+  font-size: 1.9rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+
+/* Espaço para compensar header fixo */
+body {
+  padding-top: 120px;
+}
+
+/* Menu */
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: var(--cor-dourada);
+}
+
+/* Seções */
+.secao {
+  padding: 3rem 1.5rem;
+  text-align: center;
+  max-width: 900px;
+  margin: auto;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  margin-bottom: 2rem;
+}
+
+.secao h2 {
+  color: var(--cor-vermelha);
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+.secao p {
+  font-size: 1.05rem;
+  margin-bottom: 1rem;
+}
+
+/* Imagens */
+.imagem {
+  margin-top: 1.5rem;
+  width: 80%;
+  max-width: 500px;
+  border-radius: 12px;
+  border: 3px solid var(--cor-verde);
+}
+
+/* Destaque */
+.destaque {
+  background-color: #fff0d9;
+  border-left: 8px solid var(--cor-dourada);
+}
+
+/* Cards */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.card {
+  background: white;
+  border-radius: 10px;
+  border: 3px solid var(--cor-dourada);
+  padding: 1.5rem;
+  width: 260px;
+  transition: 0.3s;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  border-color: var(--cor-vermelha);
+}
+
+.card h3 {
+  color: var(--cor-verde);
+  margin-bottom: 0.5rem;
+}
+
+/* Rodapé */
+footer {
+  background: var(--cor-preta);
+  color: #fff;
+  text-align: center;
+  padding: 1.2rem;
+  margin-top: 2rem;
+  font-size: 0.95rem;
+  border-top: 4px solid var(--cor-dourada);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+
+  nav ul {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .imagem {
+    width: 100px;
+  }
+
+  header h1 {
+    font-size: 1.4rem;
+  }
+}
+
+/* Erro corrigido: seu seletor estava digitado errado */
+section#reflexoes h2 {
+  color: var(--cor-vermelha);
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+}
